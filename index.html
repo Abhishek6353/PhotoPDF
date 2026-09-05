@@ -4,193 +4,31 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="PhotoPDF turns photos and scanned documents into polished PDFs on iPhone. Reorder, enhance, organize, and share—all privately on your device.">
-  <meta name="theme-color" content="#6366f1">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="PhotoPDF — Image to PDF for iPhone">
-  <meta property="og:description" content="Scan, enhance, and turn photos into polished PDFs—privately on your iPhone.">
-  <meta property="og:url" content="https://abhishek6353.github.io/PhotoPDF/">
-  <meta property="og:image" content="https://abhishek6353.github.io/PhotoPDF/support/app-icon.png">
-  <link rel="canonical" href="https://abhishek6353.github.io/PhotoPDF/">
-  <link rel="icon" href="support/app-icon.png">
+  <meta name="theme-color" content="#14120f">
+  <meta property="og:type" content="website"><meta property="og:title" content="PhotoPDF — Image to PDF for iPhone"><meta property="og:description" content="Scan, arrange, and turn photos into polished PDFs—privately on your iPhone."><meta property="og:url" content="https://abhishek6353.github.io/PhotoPDF/"><meta property="og:image" content="https://abhishek6353.github.io/PhotoPDF/support/app-icon.png">
+  <link rel="canonical" href="https://abhishek6353.github.io/PhotoPDF/"><link rel="icon" href="support/app-icon.png"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&amp;display=swap" rel="stylesheet">
   <title>PhotoPDF — Image to PDF for iPhone</title>
   <style>
-    :root {
-      color-scheme: light dark;
-      --brand:#6366f1;
-      --brand-strong:#4f46e5;
-      --ink:#17171c;
-      --muted:#686873;
-      --surface:#ffffff;
-      --soft:#f4f4fa;
-      --border:#e5e5ee;
-      --background:#fbfbfd;
-      --focus:rgba(79,70,229,.35);
-      --shadow:0 30px 80px rgba(43,41,89,.14);
-    }
-    *{box-sizing:border-box;}
-    html{scroll-behavior:smooth;}
-    body{margin:0;background:var(--background);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",sans-serif;line-height:1.5;-webkit-font-smoothing:antialiased;}
-    a{color:inherit;}
-    .wrap{width:min(1120px,calc(100% - 40px));margin:0 auto;}
-    header{position:sticky;top:0;z-index:20;border-bottom:1px solid color-mix(in srgb,var(--border) 80%,transparent);background:color-mix(in srgb,var(--background) 86%,transparent);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);}
-    nav{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px;}
-    .brand{display:flex;align-items:center;gap:11px;text-decoration:none;font-weight:760;letter-spacing:-.02em;}
-    .brand img{width:38px;height:38px;border-radius:10px;box-shadow:0 7px 18px rgba(79,70,229,.2);}
-    .nav-links{display:flex;align-items:center;gap:24px;color:var(--muted);font-size:14px;font-weight:600;}
-    .nav-links a{text-decoration:none;}
-    .nav-links a:hover{color:var(--ink);}
-    .hero{min-height:720px;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(330px,.75fr);align-items:center;gap:clamp(54px,8vw,110px);padding:84px 0 92px;overflow:hidden;}
-    .eyebrow{display:inline-flex;align-items:center;gap:8px;margin:0 0 18px;padding:7px 11px;border:1px solid #dcdcff;border-radius:999px;background:#f1f1ff;color:var(--brand-strong);font-size:13px;font-weight:720;}
-    .eyebrow::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--brand);box-shadow:0 0 0 4px rgba(99,102,241,.12);}
-    h1{max-width:720px;margin:0;font-size:clamp(48px,7vw,82px);line-height:.98;letter-spacing:-.062em;}
-    .lead{max-width:620px;margin:26px 0 32px;color:var(--muted);font-size:clamp(18px,2vw,21px);line-height:1.6;}
-    .actions{display:flex;align-items:center;flex-wrap:wrap;gap:14px;}
-    .button{display:inline-flex;min-height:54px;align-items:center;justify-content:center;gap:10px;padding:0 22px;border-radius:15px;background:var(--brand);color:#fff;text-decoration:none;font-weight:720;box-shadow:0 12px 28px rgba(79,70,229,.24);transition:transform 160ms ease,background 160ms ease;}
-    .button:hover{transform:translateY(-2px);background:var(--brand-strong);}
-    .button.secondary{border:1px solid var(--border);background:var(--surface);color:var(--ink);box-shadow:none;}
-    .button.secondary:hover{border-color:#c8c8d5;background:var(--soft);}
-    a:focus-visible{outline:3px solid var(--focus);outline-offset:4px;}
-    .trust{margin:22px 0 0;color:var(--muted);font-size:14px;font-weight:560;}
-    .trust span{display:inline-flex;align-items:center;gap:7px;margin-right:16px;}
-    .phone-stage{position:relative;display:grid;place-items:center;min-height:590px;}
-    .phone-stage::before{content:"";position:absolute;width:470px;height:470px;border-radius:50%;background:radial-gradient(circle,rgba(99,102,241,.24),rgba(99,102,241,.05) 55%,transparent 72%);}
-    .phone{position:relative;width:min(258px,68vw);padding:8px;border:1px solid #292932;border-radius:46px;background:#111116;box-shadow:var(--shadow);transform:rotate(1.5deg);}
-    .phone::before{content:"";position:absolute;z-index:2;top:17px;left:50%;width:84px;height:24px;border-radius:999px;background:#050507;transform:translateX(-50%);}
-    .phone img{display:block;width:100%;height:auto;aspect-ratio:1206/2622;object-fit:contain;border-radius:38px;}
-    section{padding:92px 0;}
-    .section-heading{max-width:690px;margin-bottom:42px;}
-    .kicker{margin:0 0 10px;color:var(--brand-strong);font-size:14px;font-weight:760;text-transform:uppercase;letter-spacing:.09em;}
-    h2{margin:0;font-size:clamp(36px,5vw,54px);line-height:1.05;letter-spacing:-.045em;}
-    .features{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;}
-    .feature{min-height:250px;padding:28px;border:1px solid var(--border);border-radius:24px;background:var(--surface);}
-    .feature-icon{width:48px;height:48px;display:grid;place-items:center;margin-bottom:28px;border-radius:14px;background:#ededff;color:var(--brand-strong);font-size:23px;font-weight:750;}
-    .feature h3{margin:0 0 9px;font-size:21px;letter-spacing:-.025em;}
-    .feature p{margin:0;color:var(--muted);}
-    .privacy{padding-top:12px;}
-    .privacy-card{display:grid;grid-template-columns:1fr auto;align-items:center;gap:34px;padding:clamp(30px,6vw,62px);border-radius:30px;background:#17171e;color:#fff;box-shadow:var(--shadow);}
-    .privacy-card h2{max-width:660px;}
-    .privacy-card p{max-width:680px;margin:18px 0 0;color:#bdbdc8;font-size:18px;}
-    .lock{width:100px;height:100px;display:grid;place-items:center;border:1px solid #41414c;border-radius:26px;background:#23232c;font-size:42px;}
-    .final-cta{text-align:center;padding-bottom:110px;}
-    .final-cta h2{max-width:720px;margin:0 auto 18px;}
-    .final-cta p{max-width:620px;margin:0 auto 30px;color:var(--muted);font-size:18px;}
-    footer{border-top:1px solid var(--border);}
-    .footer-inner{min-height:112px;display:flex;align-items:center;justify-content:space-between;gap:24px;color:var(--muted);font-size:14px;}
-    .footer-links{display:flex;gap:20px;}
-    .footer-links a{text-decoration:none;}
-    .footer-links a:hover{color:var(--ink);}
-    @media(max-width:800px){
-      .hero{grid-template-columns:1fr;text-align:center;padding-top:68px;}
-      .hero-copy{display:grid;justify-items:center;}
-      .lead{margin-left:auto;margin-right:auto;}
-      .actions{justify-content:center;}
-      .phone-stage{min-height:590px;}
-      .features{grid-template-columns:1fr;}
-      .feature{min-height:0;}
-      .privacy-card{grid-template-columns:1fr;}
-      .lock{grid-row:1;}
-    }
-    @media(max-width:560px){
-      .wrap{width:min(100% - 28px,1120px);}
-      .nav-links a:first-child{display:none;}
-      .nav-links{gap:14px;}
-      .hero{min-height:0;padding:54px 0 70px;}
-      h1{font-size:49px;}
-      .lead{font-size:18px;}
-      .actions{width:100%;}
-      .button{width:100%;}
-      .phone-stage{min-height:560px;}
-      section{padding:72px 0;}
-      .footer-inner{align-items:flex-start;flex-direction:column;padding:30px 0;}
-    }
-    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto;}*{transition-duration:.01ms!important;}}
-    @media(prefers-color-scheme:dark){
-      :root{--brand:#7477ff;--brand-strong:#aeb0ff;--ink:#f5f5f7;--muted:#b0b0bb;--surface:#18181e;--soft:#202027;--border:#34343d;--background:#0e0e12;--focus:rgba(174,176,255,.42);--shadow:0 30px 80px rgba(0,0,0,.36);}
-      .eyebrow{border-color:#3c3c66;background:#20203a;}
-      .feature-icon{background:#292946;}
-      .privacy-card{border:1px solid #303039;background:#18181f;}
-    }
+    :root{color-scheme:dark;--night:#14120f;--night-raised:#1d1915;--paper:#f6f1e7;--ink:#24201c;--mist:#d8d0c5;--quiet:#b9afa2;--line:rgba(246,241,231,.16);--brand:#7b7df5;--brand-strong:#a4a5ff;--red:#e65b48;--focus:#c2c3ff;--serif:"Fraunces",Iowan Old Style,Georgia,serif;--system:-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",sans-serif}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{min-width:320px;margin:0;background:var(--night);color:var(--mist);font-family:var(--system);line-height:1.5;-webkit-font-smoothing:antialiased}a{color:inherit}.wrap{width:min(1140px,calc(100% - 48px));margin:auto}.site-header{border-bottom:1px solid var(--line);background:rgba(20,18,15,.92)}nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{display:flex;align-items:center;gap:11px;text-decoration:none;font-size:16px;font-weight:700;letter-spacing:-.02em;color:var(--paper)}.brand img{width:36px;height:36px;border-radius:10px}.nav-links{display:flex;gap:22px;color:var(--quiet);font-size:14px;font-weight:600}.nav-links a{text-decoration:none}.nav-links a:hover{color:var(--paper)}a:focus-visible{outline:3px solid var(--focus);outline-offset:5px;border-radius:4px}
+    .hero{min-height:720px;display:grid;grid-template-columns:minmax(0,1.13fr) minmax(305px,.72fr);align-items:center;gap:clamp(48px,8vw,120px);padding:82px 0 96px;overflow:clip}.hero-copy{position:relative;z-index:1}.note{display:flex;align-items:center;gap:10px;margin:0 0 22px;color:var(--quiet);font-size:14px;font-weight:620}.note::before{display:block;width:27px;border-top:1px solid var(--brand-strong);content:""}h1,h2,h3{font-family:var(--serif);color:var(--paper)}h1{max-width:710px;margin:0;font-size:clamp(52px,7vw,86px);font-weight:600;line-height:.96;letter-spacing:-.055em}.lead{max-width:565px;margin:26px 0 28px;color:var(--quiet);font-size:clamp(18px,2vw,21px);line-height:1.55}.app-store-badge{display:inline-flex;align-items:center;border-radius:8px}.app-store-badge img{display:block;width:168px;height:auto}.trust{display:flex;flex-wrap:wrap;gap:14px 20px;margin:23px 0 0;color:var(--quiet);font-size:14px}.trust span{display:inline-flex;align-items:center;gap:7px}.trust svg{width:15px;height:15px;fill:none;stroke:var(--brand-strong);stroke-width:2.2}
+    .phone-stage{position:relative;display:grid;place-items:center;min-height:590px}.phone-stage::before{position:absolute;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(123,125,245,.25),rgba(123,125,245,.06) 48%,transparent 71%);content:""}.phone{position:relative;z-index:2;width:min(258px,68vw);padding:8px;border:1px solid #413c35;border-radius:46px;background:#0c0b0a;box-shadow:0 34px 76px rgba(0,0,0,.48);transform:rotate(1.5deg)}.phone::before{position:absolute;z-index:2;top:17px;left:50%;width:84px;height:24px;border-radius:999px;background:#030303;content:"";transform:translateX(-50%)}.phone img{display:block;width:100%;height:auto;aspect-ratio:598/1300;object-fit:contain;border-radius:38px}.reorder-stack{position:absolute;z-index:3;right:-12px;bottom:78px;width:112px;height:140px;pointer-events:none}.mini-page{position:absolute;width:80px;height:110px;border:1px solid rgba(50,42,32,.16);border-radius:7px;background:linear-gradient(135deg,#fffdf8,#eee4d6);box-shadow:0 12px 23px rgba(0,0,0,.25)}.mini-page::before,.mini-page::after{position:absolute;left:14px;right:14px;height:3px;border-radius:3px;background:#c9c0b4;content:""}.mini-page::before{top:25px}.mini-page::after{top:36px;right:28px}.mini-page.one{left:9px;top:14px;transform:rotate(-9deg)}.mini-page.two{left:26px;top:8px;transform:rotate(5deg);background:linear-gradient(135deg,#fffdf8,#f2ddd1)}.mini-page.three{left:16px;top:23px;transform:rotate(-1deg);background:linear-gradient(135deg,#fffdf8,#e1e5fa)}@media(prefers-reduced-motion:no-preference){.mini-page.one{animation:swap-one 1.5s cubic-bezier(.22,.75,.24,1) .45s both}.mini-page.two{animation:swap-two 1.5s cubic-bezier(.22,.75,.24,1) .45s both}.mini-page.three{animation:swap-three 1.5s cubic-bezier(.22,.75,.24,1) .45s both}@keyframes swap-one{0%,22%{transform:rotate(-9deg)}48%{transform:translate(26px,-16px) rotate(8deg)}100%{transform:translate(17px,-6px) rotate(5deg)}}@keyframes swap-two{0%,22%{transform:rotate(5deg)}48%{transform:translate(-20px,20px) rotate(-9deg)}100%{transform:translate(-17px,11px) rotate(-9deg)}}@keyframes swap-three{0%,100%{transform:rotate(-1deg)}}}
+    .feature-section{padding:10px 0 110px}.section-heading{display:grid;grid-template-columns:minmax(0,1fr) minmax(290px,.68fr);gap:48px;align-items:end;margin-bottom:50px}.section-heading p{max-width:390px;margin:0 0 4px;color:var(--quiet);font-size:17px;line-height:1.55}.section-heading h2{max-width:670px;margin:0;font-size:clamp(42px,5.2vw,65px);font-weight:550;line-height:1;letter-spacing:-.052em}.page-fan{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));align-items:start;padding:18px 14px 22px}.feature{position:relative;min-height:327px;padding:30px 28px 31px;border:1px solid rgba(60,47,33,.14);border-radius:3px;background:var(--paper);color:var(--ink);box-shadow:0 19px 35px rgba(0,0,0,.24)}.feature:nth-child(1){z-index:1;transform:rotate(-3.2deg) translate(15px,10px)}.feature:nth-child(2){z-index:3;transform:translateY(-7px)}.feature:nth-child(3){z-index:2;transform:rotate(3.2deg) translate(-15px,10px);background:#f1eadd}.feature::after{position:absolute;right:28px;bottom:27px;left:28px;border-top:1px dashed rgba(60,47,33,.22);content:""}.feature-icon{display:grid;width:45px;height:45px;place-items:center;margin-bottom:58px;border:1.7px solid var(--ink);border-radius:50%;color:var(--ink)}.feature-icon svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}.feature h3{margin:0 0 8px;color:var(--ink);font-size:27px;font-weight:600;line-height:1.05;letter-spacing:-.035em}.feature p{max-width:275px;margin:0;color:#665e55;font-size:15px;line-height:1.52}.feature:nth-child(3) .feature-icon{border-color:var(--red);color:var(--red)}
+    .privacy-section{padding:12px 0 110px}.privacy-paper{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:50px;padding:clamp(36px,7vw,76px);border-radius:4px;background:var(--paper);color:var(--ink);box-shadow:0 22px 48px rgba(0,0,0,.24);transform:rotate(-.35deg)}.privacy-paper h2{max-width:730px;margin:0;color:var(--ink);font-size:clamp(39px,5vw,61px);font-weight:550;line-height:1;letter-spacing:-.05em}.privacy-paper p{max-width:680px;margin:20px 0 0;color:#665e55;font-size:18px;line-height:1.55}.local-device{display:grid;width:118px;height:150px;place-items:center;border:2px solid var(--ink);border-radius:24px}.local-device svg{width:63px;height:63px;fill:none;stroke:var(--ink);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}.final-cta{padding:18px 0 108px;text-align:center}.final-cta h2{max-width:760px;margin:0 auto 18px;font-size:clamp(42px,5.2vw,65px);font-weight:550;line-height:1;letter-spacing:-.052em}.final-cta p{max-width:590px;margin:0 auto 29px;color:var(--quiet);font-size:18px}.site-footer{border-top:1px solid var(--line)}.footer-inner{display:flex;min-height:108px;align-items:center;justify-content:space-between;gap:24px;color:var(--quiet);font-size:13px}.footer-links{display:flex;gap:20px}.footer-links a{text-decoration:none}.footer-links a:hover{color:var(--paper)}
+    @media(max-width:800px){.hero{grid-template-columns:1fr;text-align:center;padding-top:70px}.hero-copy{display:grid;justify-items:center}.lead{margin-right:auto;margin-left:auto}.note{justify-content:center}.phone-stage{min-height:530px}.section-heading{grid-template-columns:1fr;gap:19px}.page-fan{grid-template-columns:1fr;padding:5px 10px}.feature{min-height:0;margin:0;transform:none!important}.feature:nth-child(2),.feature:nth-child(3){margin-top:-1px}.feature-icon{margin-bottom:25px}.feature::after{display:none}.reorder-stack{right:calc(50% - 175px)}.privacy-paper{grid-template-columns:1fr;transform:none}.local-device{grid-row:1}}
+    @media(max-width:560px){.wrap{width:min(100% - 30px,1140px)}nav{min-height:68px}.nav-links a:first-child{display:none}.nav-links{gap:15px}.hero{padding:55px 0}.note{margin-bottom:18px}h1{font-size:51px}.lead{font-size:18px}.phone-stage{min-height:495px}.phone{width:224px}.reorder-stack{right:calc(50% - 168px);bottom:56px;transform:scale(.82);transform-origin:center}.feature-section{padding-bottom:70px}.section-heading{margin-bottom:29px}.feature{padding:28px 25px}.privacy-section{padding-bottom:76px}.privacy-paper{gap:29px;padding:34px 27px}.local-device{width:92px;height:116px;border-radius:19px}.local-device svg{width:52px;height:52px}.app-store-badge img{width:158px}.footer-inner{align-items:flex-start;flex-direction:column;padding:28px 0}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.mini-page{animation:none!important}}
   </style>
-  <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"MobileApplication","name":"PhotoPDF: Image to PDF","operatingSystem":"iOS","applicationCategory":"ProductivityApplication","description":"Turn photos and scanned documents into polished PDFs privately on your iPhone.","url":"https://abhishek6353.github.io/PhotoPDF/","downloadUrl":"https://apps.apple.com/app/id6801907706"}
-  </script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"MobileApplication","name":"PhotoPDF: Image to PDF","operatingSystem":"iOS","applicationCategory":"ProductivityApplication","description":"Turn photos and scanned documents into polished PDFs privately on your iPhone.","url":"https://abhishek6353.github.io/PhotoPDF/","downloadUrl":"https://apps.apple.com/app/id6801907706"}</script>
 </head>
 <body>
-  <header>
-    <nav class="wrap" aria-label="Primary navigation">
-      <a class="brand" href="./"><img src="support/app-icon.png" alt=""><span>PhotoPDF</span></a>
-      <div class="nav-links">
-        <a href="#features">Features</a>
-        <a href="support/">Support</a>
-        <a href="privacy/">Privacy</a>
-      </div>
-    </nav>
-  </header>
-
+  <header class="site-header"><nav class="wrap" aria-label="Primary navigation"><a class="brand" href="./"><img src="support/app-icon.png" alt=""><span>PhotoPDF</span></a><div class="nav-links"><a href="#features">Features</a><a href="support/">Support</a><a href="privacy/">Privacy</a></div></nav></header>
   <main>
-    <div class="wrap hero">
-      <div class="hero-copy">
-        <p class="eyebrow">Made for iPhone</p>
-        <h1>Turn photos into polished PDFs.</h1>
-        <p class="lead">Scan documents or choose photos, perfect every page, and keep your PDFs organized—all in one fast, private app.</p>
-        <div class="actions">
-          <a class="button" href="https://apps.apple.com/app/id6801907706" rel="noopener">Download on the App Store <span aria-hidden="true">↗</span></a>
-          <a class="button secondary" href="#features">See how it works</a>
-        </div>
-        <p class="trust"><span>✓ No account</span><span>✓ No uploads</span><span>✓ Your files stay local</span></p>
-      </div>
-      <div class="phone-stage" aria-label="PhotoPDF showing a completed PDF">
-        <div class="phone"><img src="assets/pdf-ready.png" alt="PhotoPDF confirmation screen showing a completed four-page PDF" width="598" height="1300"></div>
-      </div>
-    </div>
-
-    <section id="features" class="wrap">
-      <div class="section-heading">
-        <p class="kicker">Simple from start to finish</p>
-        <h2>Everything you need. Nothing in the way.</h2>
-      </div>
-      <div class="features">
-        <article class="feature">
-          <div class="feature-icon" aria-hidden="true">⌁</div>
-          <h3>Scan or import</h3>
-          <p>Use the document scanner, camera, or Photo Library. Add up to 50 pages at once.</p>
-        </article>
-        <article class="feature">
-          <div class="feature-icon" aria-hidden="true">✦</div>
-          <h3>Perfect every page</h3>
-          <p>Reorder, rotate, preview, and choose Original, Auto Enhance, or Black &amp; White.</p>
-        </article>
-        <article class="feature">
-          <div class="feature-icon" aria-hidden="true">▤</div>
-          <h3>Find and share</h3>
-          <p>Your PDFs appear in Recents, ready to search, rename, preview, share, or delete.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="wrap privacy">
-      <div class="privacy-card">
-        <div>
-          <p class="kicker">Private by design</p>
-          <h2>Your photos and PDFs stay on your device.</h2>
-          <p>PhotoPDF does not require an account and does not upload your documents. Your work remains under your control.</p>
-        </div>
-        <div class="lock" aria-hidden="true">⌑</div>
-      </div>
-    </section>
-
-    <section class="wrap final-cta">
-      <h2>From camera roll to PDF in seconds.</h2>
-      <p>A focused iPhone utility for receipts, notes, forms, assignments, and everyday documents.</p>
-      <a class="button" href="https://apps.apple.com/app/id6801907706" rel="noopener">Get PhotoPDF on the App Store <span aria-hidden="true">↗</span></a>
-    </section>
+    <section class="wrap hero" aria-labelledby="page-title"><div class="hero-copy"><p class="note">Made for iPhone</p><h1 id="page-title">Turn photos into a PDF you’re ready to send.</h1><p class="lead">Scan documents or choose photos, put every page in order, and create a clean PDF right on your iPhone.</p><a class="app-store-badge" href="https://apps.apple.com/app/id6801907706" rel="noopener" aria-label="Download PhotoPDF on the App Store"><img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" width="168" height="56"></a><p class="trust"><span><svg viewBox="0 0 18 18" aria-hidden="true"><path d="m3 9 3.3 3.3L15 4.8"/></svg>No account required</span><span><svg viewBox="0 0 18 18" aria-hidden="true"><path d="m3 9 3.3 3.3L15 4.8"/></svg>Create PDFs locally</span></p></div><div class="phone-stage" aria-label="PhotoPDF showing a completed PDF"><div class="phone"><img src="assets/pdf-ready.png" alt="PhotoPDF confirmation screen showing a completed four-page PDF" width="598" height="1300"></div><div class="reorder-stack" aria-hidden="true"><span class="mini-page one"></span><span class="mini-page two"></span><span class="mini-page three"></span></div></div></section>
+    <section id="features" class="wrap feature-section" aria-labelledby="features-title"><div class="section-heading"><h2 id="features-title">From loose pages to one clean file.</h2><p>Start with what you have, arrange it the way it should read, then make a PDF that’s easy to keep or share.</p></div><div class="page-fan"><article class="feature"><div class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 4.5h8.5L19 8v11.5H7z"/><path d="M15.5 4.5V8H19M10 12h6M10 15.5h4"/></svg></div><h3>Scan or import</h3><p>Use the document scanner, camera, or Photo Library. Add up to 50 images to one PDF.</p></article><article class="feature"><div class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 7.5h10v10H7zM4 4.5h10M4 4.5v10"/><path d="m13.5 14 2.7-2.7M13.3 11.2h2.9v2.9"/></svg></div><h3>Put pages in order</h3><p>Drag to reorder, rotate a page, or choose Original, Auto enhance, or Black &amp; white.</p></article><article class="feature"><div class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="5.5"/><path d="m15 15 4 4M8.2 10.5h4.6"/></svg></div><h3>Find and share</h3><p>Your PDFs appear in Recents, ready to search, rename, preview, share, or delete.</p></article></div></section>
+    <section class="wrap privacy-section" aria-labelledby="privacy-title"><div class="privacy-paper"><div><h2 id="privacy-title">Your photos and PDFs stay on your device.</h2><p>PhotoPDF creates your documents locally without requiring an account or uploading your files. You decide when and where to share them.</p></div><div class="local-device" aria-hidden="true"><svg viewBox="0 0 64 64"><rect x="14" y="5" width="36" height="54" rx="7"/><path d="M25 18h12l6 6v19H25zM37 18v6h6M29 31h10M29 36h8M29 51h6"/></svg></div></div></section>
+    <section class="wrap final-cta"><h2>One clean PDF. Ready when you are.</h2><p>Turn photos, receipts, notes, forms, and everyday paperwork into a file you can keep or send.</p><a class="app-store-badge" href="https://apps.apple.com/app/id6801907706" rel="noopener" aria-label="Download PhotoPDF on the App Store"><img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" width="168" height="56"></a></section>
   </main>
-
-  <footer>
-    <div class="wrap footer-inner">
-      <span>© 2026 Abhisheksingh Kurmi</span>
-      <div class="footer-links"><a href="support/">Support</a><a href="privacy/">Privacy Policy</a></div>
-    </div>
-  </footer>
+  <footer class="site-footer"><div class="wrap footer-inner"><span>© 2026 Abhisheksingh Kurmi</span><div class="footer-links"><a href="support/">Support</a><a href="privacy/">Privacy Policy</a></div></div></footer>
 </body>
 </html>
